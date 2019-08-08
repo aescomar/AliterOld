@@ -15,9 +15,15 @@ body{
 
 /* Globales */
 .contenido{
-	width: 80%;
-	margin: auto;
+	/*width: 70vh;*/
+	margin: 0 auto;
 	overflow: hidden;
+}
+
+.contenido h2 {
+	content: flow;
+	font-size: 3rem;
+	margin-top: 50vh;
 }
 
 .boton1{
@@ -84,6 +90,7 @@ header .resaltad0 {
 	color: #1293d4;
 	font-family: Bitwise;
 	font-weight: bold;
+	letter-spacing: .3rem;
 	font-size: 50px;
 }
 
@@ -95,24 +102,19 @@ header a:hover{
 /* Cabecera con imagen */
 #cabecera {
 	min-height: 400px;
-	/*background: url('../img/img0.jpg') no-repeat 0 -400px;
-	background: url('../img/img00.jpg') no-repeat; */
 	text-align: center;
 	color: #35424a;
-	/*filter: blur(2px);*/
 	transition: all 1000ms;
 }
 
 #cabecera img {
 	position:absolute; left:0; top:0;	
 	margin :0;
-	width :100%; 
-	height: 100%;
+	width :100vw; 
+	height: 100vh;
 }
 
-#cabecera:hover::after {filter: blur(2px);}
-
-#cabecera:hover img {filter: blur(2px);}
+/*#cabecera:hover img {filter: blur(2px);}*/
 
 #cabecera h1 {
 	margin-top: 400px;
