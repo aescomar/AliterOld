@@ -1,21 +1,28 @@
-body{
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
 	font: 15px Verdana, Arial, Helvetica, sans-serif;
 	padding: 0;
 	margin: 0;
 	background-color: #f4f4f4; /*gris*/
+	padding: 0 10px 10px 10px;
 }
 
 @font-face {
   font-family: 'Bitwise';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400;	/*width: 70vh;*/
+
   src: local('Bitwise'),
        url(Bitwise.ttf) format('truetype');
  }
 
 /* Globales */
 .contenido{
-	/*width: 70vh;*/
 	margin: 0 auto;
 	overflow: hidden;
 }
@@ -41,17 +48,19 @@ body{
     border-radius:30px;
 }
 
-ul{
+ul {
 	margin: 0;
 	padding: 0;
 }
 
-header{
-	background-color:#24282b; /*negro mate */
+header {
 	color: #fcff33;
 	font-family: Impact;
-	padding-top: 5px;
-	min-height: 50px;
+    background: linear-gradient(to bottom, blue, navy);
+  	background-size: cover;  
+  	background-position: top;
+  	position: relative;
+  	clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
 	border-bottom: 7px solid #1293d4;  /*electrico?*/
 }
 
@@ -109,14 +118,34 @@ header a:hover{
 
 #cabecera img {
 	position:absolute; left:0; top:0;	
-	margin :0;
+	/*margin :0;*/
 	width :100vw; 
 	height: 100vh;
 }
 
 /*#cabecera:hover img {filter: blur(2px);}*/
 
-#cabecera h1 {
+.cab-texto {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+
+.cab-princ {
+	display: block;
+	font-size: 2rem; 
+}
+
+.cab-secun {
+	display: block;
+	font-size: 1rem; 
+	color: white;
+		margin-bottom: 3rem;
+}
+
+/*#cabecera h1 {
 	margin-top: 400px;
 	font-size: 55px;
 	margin-bottom: 10px;
@@ -125,7 +154,7 @@ header a:hover{
 #cabecera p {
 	color: #fff;
 	font-size: 20px;
-}
+}*/
 
 #boletin {
 	padding: 2px;
@@ -139,7 +168,7 @@ header a:hover{
 
 #boletin form {
 	float: right;
-	margin-top: 12px;
+	margin-top: 50vhpx;
 }
 
 #boletin input[type="email"]{
