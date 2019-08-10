@@ -20,6 +20,16 @@ body {
   src: local('Bitwise'),
        url(Bitwise.ttf) format('truetype');
  }
+ 
+ @keyframes movDerecha {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  80% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
 
 /* Globales */
 .contenido{
@@ -54,13 +64,17 @@ ul {
 }
 
 header {
+	height: 50vh;
+    background-image: linear-gradient(to right bottom, 
+  	rgba(0, 0, 255, 0.8), rgba(0, 0, 128, 0.8)), 
+    url(../img/img00.jpg);
 	color: #fcff33;
 	font-family: Impact;
-    background: linear-gradient(to bottom, blue, navy);
+    /*background: linear-gradient(to bottom, blue, navy); */
   	background-size: cover;  
   	background-position: top;
   	position: relative;
-  	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  	clip-path: polygon(0 0, 100% 0, 100% 40vh, 50% 100%, 0 40vh);
 	border-bottom: 7px solid #1293d4;  /*electrico?*/
 }
 
@@ -110,87 +124,54 @@ header a:hover{
 
 /* Cabecera con imagen */
 #cabecera {
-	min-height: 400px;
+	/*min-height: 400px;*/
 	text-align: center;
 	color: #35424a;
-	transition: all 1000ms;
+	position: relative;
+	/*transition: all 1000ms;*/
 }
 
 #cabecera img {
-	position:absolute; left:0; top:0;	
-	/*margin :0;*/
+	position:absolute; left:0; top:2px;	
 	width :100vw; 
 	height: 100vh;
 }
 
-/*#cabecera:hover img {filter: blur(2px);}*/
-
 .cab-texto {
-  position: absolute;
-  top: 80%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-
+  text-align: center;
+  margin-top: 17vh;  
 }
 
 .cab-princ {
 	display: block;
-	font-size: 2rem; 
+	font-size: 5vh; 
+	color: #35424a;
+    text-align: center;	
 }
 
 .cab-secun {
 	display: block;
 	font-size: 1rem; 
 	color: white;
-	margin-bottom: 3rem;
-}
-
-/*#cabecera h1 {
-	margin-top: 400px;
-	font-size: 55px;
-	margin-bottom: 10px;
-}
-
-#cabecera p {
-	color: #fff;
-	font-size: 20px;
-}*/
-
-#boletin {
-	padding: 2px;
-	color: #fff;
-	background:#24282b;
-}
-
-#boletin  h1{
-	float: left;
-}
-
-#boletin form {
-	float: right;
-	margin-top: 50vhpx;
-}
-
-#boletin input[type="email"]{
-	padding: 4px;
-	height: 25px;
-	width: 250px;
+	text-align: center;
+	animation: movDerecha 1s ease-out;
 }
 
 /* Cajas */
 #cajas {
-	margin-top: 10px;
+    display : inline;
 }
 
 #cajas .caja {
 	float: left;
 	text-align: center;
 	width: 30%;
-	padding: 10px;
+	padding: 5%;
 }
 
 #cajas .caja img {
 	width: 20%px;
+	margin-bottom: 10px;
 }
 
 
@@ -199,15 +180,16 @@ aside#lateral {
 	float: right;
 	width: 35%;
 	margin-top: 10px;
+
 }
 
 aside#latera1 {
 	float: right;
-	width: 55%;
+	width: 45%;
 	margin-top: 10px;
 }
 .oscuro {
-	padding: 15px;
+	padding: 10px;
 	background-color: #35424a;
 	color: #fff;
 	margin-top: 10px;
@@ -225,7 +207,7 @@ ul#servicios li {
 	list-style: none;
 	padding: 20px;
 	border: 1px solid #ccc;
-	width: 93%;
+	width: 98%;
 	margin-bottom: 5px;
 	background-color: #e6e6e6;
 }
@@ -241,7 +223,7 @@ footer {
 
 /* Contacto */
 input, textarea {
-	width: 90%;
+	width: 93%;
 	height: 35px;
 	border: 1px solid gray;
 	margin-bottom: 5px;
