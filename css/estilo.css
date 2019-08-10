@@ -60,7 +60,7 @@ header {
   	background-size: cover;  
   	background-position: top;
   	position: relative;
-  	clip-path: polygon(0 0, 100% 0, 100% 15vh, 0 100%);
+  	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 	border-bottom: 7px solid #1293d4;  /*electrico?*/
 }
 
