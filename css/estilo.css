@@ -20,12 +20,6 @@
   	100% { opacity: 1; transform: translate(0); }   }
 
 /* Globales */
-	@font-face {
-	  font-family: 'Bitwise';
-	  font-style: normal;
-	  font-weight: 400;
-	  src: local('Bitwise'),
-	       url(Bitwise.ttf) format('truetype'); }
 
   *,
   *::after,
@@ -35,18 +29,18 @@
     box-sizing: inherit; }
 
   html {
-    font-size: 62.5%;  } 
+    font-size: 62.5%; } 
     @media only screen and (max-width: 56.25em) {
       html { font-size: 50%; } }
     @media only screen and (max-width: 75em) {
-      html { font-size: 56.25%; } }
+      html { font-size: 57%; } }
     @media only screen and (min-width: 112.5em) {
-      html { font-size: 75%; }}
+      html { font-size: 80%; } }
 
   body {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    padding: 3rem; }
+    padding: 3rem;}
     @media only screen and (max-width: 56.25em) {
       body { padding: 0; } }
 
@@ -79,25 +73,31 @@
 
   .umargen-abajo2 {
     margin-bottom: 4rem !important;  }
+    @media only screen and (max-width: 56.25em) {
+    .umargen-abajo2 {
+      margin-bottom: 2rem !important; } }  
 
   .umargen-abajo3 {
     margin-bottom: 8rem !important; }  
     @media only screen and (max-width: 56.25em) {
     .umargen-abajo3 {
-      margin-bottom: 3rem !important; } }  
+      margin-bottom: 4rem !important; } }  
 
   .umargen-arriba1 {
     margin-top: 4rem !important; }
     @media only screen and (max-width: 56.25em) {
-    .u-margin-bottom-big {
+    .umargen-arriba1 {
       margin-bottom: 2rem !important; } }
 
   .umargen-arriba2 {
-    margin-top: 8rem !important; }
+    margin-top: 8rem !important; }    
+    @media only screen and (max-width: 56.25em) {
+    .umargen-arriba2 {
+      margin-bottom: 4rem !important; } }
+
 
   .utitulo-1 {
     color: white;
-    /*text-transform: uppercase;*/
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     margin-bottom: 6rem; }
@@ -155,16 +155,16 @@
   .ufila {
     max-width: 114rem;
     margin: 0 auto; }
+    @media only screen and (max-width: 56.25em) {
+    .ufila {
+      max-width: 50rem;
+      padding: 0 3rem; } }
 
     .ufila:not(:last-child) {
       margin-bottom: 8rem; }
       @media only screen and (max-width: 56.25em) {
       .ufila:not(:last-child) {
-        margin-bottom: 6rem; } }
-      @media only screen and (max-width: 56.25em) {
-      .ufila {
-        max-width: 50rem;
-        padding: 0 3rem; } }
+        margin-bottom: 4rem; } }
 
     .ufila::after {
       content: "";
@@ -311,6 +311,14 @@
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer;  }
+    @media only screen and (max-width: 37.5em) {
+    .menu_btn {
+      top: 3rem;
+      right: 3rem; } }
+    @media only screen and (max-width: 56.25em) {
+    .menu_btn {
+      top: 4rem;
+      right: 4rem; } }
 
     .menu_icon {
       position: relative;
@@ -396,8 +404,12 @@
     background-size: cover;
     background-position: top;
     position: relative;
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); 
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 50% 100%, 0 75vh); }
+    @media only screen and (max-width: 37.5em) {
+    .cabecera {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 50% 100%,0 85vh); } }
 
     .cabecera_logo {
       position: absolute;
@@ -424,6 +436,10 @@
 
   .cuadro {
     position: relative; }
+    @media only screen and (max-width: 56.25em) {
+    .cuadro {
+    	margin-top: 0rem;
+      padding: 0rem 0; } }
 
     .cuadro_foto {
       width: 55%;
@@ -600,59 +616,65 @@
 /* Nosotros */
 
   .nosotros {
-   position: relative;
-   padding: 5rem 0; 
-  }
-
-  .bg-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
-    opacity: .3;
-    overflow: hidden; }
-
-    .bg-video__content {
-      height: 100%;
-      width: 100%;
-      -o-object-fit: cover;
-      object-fit: cover; }
+  	padding: 5rem 0;
+  	background-image: url(../img/img05.jpg); 
+    background-size: cover;
+    background-position: top; }
 
   .story {
     width: 75%;
     margin: 0 auto;
     box-shadow: 0 3rem 6rem rgba(0, 0, 0, 0.1);
-    background-color: rgba(255, 255, 255, 1); /* 0.6 */
+    background-color: rgba(255, 255, 255, 0.7); 
     border-radius: 3px;
     padding: 6rem;
     padding-left: 9rem;
     font-size: 1.6rem;
-    transform: skewX(-6deg); 
-    }
+    transform: skewX(-6deg); }
+		@media only screen and (max-width: 56.25em) {
+    .story {
+    	width: 100%;
+    	padding: 2rem;
+      /*padding-left: 0rem;*/
+    	transform: skewX(0deg); }}
+
     .story__shape {
       width: 27rem;
       height: 27rem;
       float: left;
-      /*transform: translateX(-3rem) translateY(5rem) skewX(6deg);*/
       transform: translateX(-3rem) skewX(6deg);
       -webkit-shape-outside: circle(50% at 50% 50%);
       shape-outside: circle(50% at 50% 50%);
       -webkit-clip-path: circle(50% at 50% 50%);
       clip-path: circle(50% at 50% 50%);
+      position: relative; }
+      @media only screen and (max-width: 56.25em) {
+    	.story__shape {
+    	width: 7rem;
+    	height: 7rem;
+    	padding: 0rem;
+      padding-left: 0rem;
+    	transform: skewX(0deg); }}
 
-      position: relative; 
-    }
     .story__img {
       height: 100%;
       transform: translateX(0rem) scale(2);
       backface-visibility: hidden;
-      transition: all .5s; 
-    }
+      transition: all .5s; }
+      @media only screen and (max-width: 56.25em) {
+    	.story__img {
+    	height: 100%;
+    	transform: scale(2); }}
+
     .story__text {
-      transform: skewX(6deg); 
-    }
+    	color: black;
+      transform: skewX(3deg); }
+      @media only screen and (max-width: 56.25em) {
+    	.story__text {
+    		/*margin-right: 0;
+    		padding:0;*/
+    	  transform: skewX(0deg); }}
+
     .story__caption {
       position: absolute;
       top: 50%;
@@ -681,7 +703,7 @@
     background-image: linear-gradient(to right bottom, rgba(44, 130, 201, 0.8), rgba(1, 50, 67, 0.8));   }
     @media only screen and (max-width: 56.25em) {
     .contacto {
-      padding: 10rem 0; } }
+      padding: 3rem 0; } }
 
   .apunte {
     background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%);
@@ -692,18 +714,19 @@
     margin-left: 10rem;
     width: 85%;
     padding: 6rem;}
-    /*@media only screen and (max-width: 75em) {
-      .apunte {
-      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 65%), url(../img/img-04.jpg);
-      background-size: cover; } } */
-    /*@media only screen and (max-width: 56.25em) {*/
-
-    /*.book__form {
-      width: 50%;
-      padding: 6rem; }*/
+    @media only screen and (max-width: 56.25em) {
+     .apunte {
+      margin-left: 0rem;
+    	width: 100%;
+    	padding: 2rem;
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%);
+      background-size: cover; } } 
 
       .apunte_fila {
       	display: flex;      }
+      @media only screen and (max-width: 56.25em) {
+      .apunte_fila {
+      	display: block; } }
 
   .form_grp:not(:last-child) {
     margin-bottom: 2rem; }
@@ -746,8 +769,10 @@
     transform: translateY(-2rem); }
 
   .form_rad-grp {
-    /*width: 90%; */
     display: inline-block; }
+  	@media only screen and (max-width: 56.25em) {
+    .form_rad-grp {
+     	display: block; } }
 
     .form_rad-inp {
       display: none; }
@@ -788,8 +813,12 @@
   .datos {
   	margin: 5rem 0 0 23rem;
   	font-size: 1.6rem;
-  	color: white;
-  }
+  	color: white; }
+    @media only screen and (max-width: 56.25em) {
+     .datos {
+     	margin: 0;
+     	padding: 5rem;
+  	  background-color: rgba(1, 50, 67, 0.8); } }
 
 /* Final */
 
@@ -799,6 +828,10 @@
     font-size: 1.4rem;
     display: flex;
     color: #f7f7f7; }
+     @media only screen and (max-width: 56.25em) {
+    .pie {
+    	margin-left: 0;
+      flex-direction: column;} }
 
     .pie_logo-box {
       margin: 0 5rem 0 5rem; }
@@ -807,6 +840,10 @@
 	      width: 13rem;
 	      height: auto;
 	      border-radius: 6.5rem 0; }
+	      @media only screen and (max-width: 56.25em) {
+    		.pie_logo {
+    			width: 7rem;
+      		 border-radius: 3.5rem 0; } }
 
     .pie_nav {
       border-top: 1px solid #777;
