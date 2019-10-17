@@ -1,0 +1,2 @@
+var firebaseConfig= {apiKey: "AIzaSyDWb3Pne9AJpsdDDAr4tjMU6ckCThYVJAo",authDomain: "tocafe-31093.firebaseapp.com",databaseURL: "https://tocafe-31093.firebaseio.com",
+ projectId: "tocafe-31093",storageBucket: "gs://tocafe-31093.appspot.com",messagingSenderId: "1043060556494",appId: "1:1043060556494:web:d2945a01775a811b"  }; firebase.initializeApp(firebaseConfig); var storage = firebase.storage(); var db =firebase.firestore();
